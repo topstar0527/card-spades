@@ -1,0 +1,80 @@
+/* RESET/SETUP */
+
+body, h1, h2, h3, h4, h5, h6, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  /* TODO: get a proper reset here */
+  color: white;
+  text-decoration: none;
+}
+
+#root {
+  background: #1F5E0D;
+  color: white;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+/* FOOTER */
+
+.Footer {
+  background: #003600;
+  padding: 10px;
+}
+
+/* MENU */
+
+.Menu {
+  list-style: none;
+}
+
+.Menu-item {
+  cursor: pointer;
+}
+
+.Menu-item:before {
+  content: '';
+  display: inline-block;
+  width: 1rem;
+}
+
+.Menu-item:hover, .Menu-item:focus {
+  /* Using text-shadow here instead of bold as a */
+  /* hacky way to prevent the container from resizing */
+  text-shadow: -0.06ex 0 white, 0.06ex 0 white;
+}
+
+.Menu-item:hover:before, .Menu-item:focus:before {
+  content: '>';
+}
+
+/* WELCOME SCREEN */
+
+.WelcomeScreen {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  height: 100%;
+}
+
+.WelcomeScreen-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  grid-column: 2;
+  grid-row: 2;
+  justify-content: center;
+}
+
+.WelcomeScreen-footer {
+  align-self: end;
+  grid-column: 1 / 4;
+  grid-row: 3;
+}
+
+.WelcomeScreen-title {
+  margin-bottom: 1rem;
+}
